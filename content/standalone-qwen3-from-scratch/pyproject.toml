@@ -9,11 +9,13 @@ description = "Standalone Qwen3"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "huggingface-hub>=0.34.3",
+    "tokenizers>=0.21.4",
     "torch>=2.7.1",
 ]
 
 [project.scripts]
-start = "main:main"
+start = "qwen3.main:start"
 
 [tool.hatch.build.targets.wheel]
 packages = ["."]

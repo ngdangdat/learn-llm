@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=70.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "standalone-qwen3-from-scratch"
@@ -14,3 +14,6 @@ dependencies = [
 
 [project.scripts]
 start = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
